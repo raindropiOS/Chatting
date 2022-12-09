@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FA8DA5229430586000336B4 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8DA5129430586000336B4 /* ListCell.swift */; };
 		8FEB3AC72942EC0D00D99BCF /* ChattingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3AC62942EC0D00D99BCF /* ChattingApp.swift */; };
 		8FEB3AC92942EC0D00D99BCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3AC82942EC0D00D99BCF /* ContentView.swift */; };
 		8FEB3ACB2942EC0E00D99BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEB3ACA2942EC0E00D99BCF /* Assets.xcassets */; };
@@ -16,15 +17,22 @@
 		8FEB3ADA2942EFA700D99BCF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEB3AD92942EFA700D99BCF /* FirebaseDatabase */; };
 		8FEB3ADC2942EFA700D99BCF /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEB3ADB2942EFA700D99BCF /* FirebaseDatabaseSwift */; };
 		8FEB3ADE2942EFA700D99BCF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEB3ADD2942EFA700D99BCF /* FirebaseFirestore */; };
+		8FEB3AE02942F5A500D99BCF /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3ADF2942F5A500D99BCF /* Car.swift */; };
+		8FEB3AE32942F69800D99BCF /* CarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3AE22942F69800D99BCF /* CarStore.swift */; };
+		8FEB3AE52942FBA800D99BCF /* CarDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3AE42942FBA800D99BCF /* CarDataList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FA8DA5129430586000336B4 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		8FEB3AC32942EC0D00D99BCF /* Chatting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEB3AC62942EC0D00D99BCF /* ChattingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingApp.swift; sourceTree = "<group>"; };
 		8FEB3AC82942EC0D00D99BCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FEB3ACA2942EC0E00D99BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FEB3ACD2942EC0E00D99BCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FEB3AD42942EE7B00D99BCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Chatting/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8FEB3ADF2942F5A500D99BCF /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		8FEB3AE22942F69800D99BCF /* CarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarStore.swift; sourceTree = "<group>"; };
+		8FEB3AE42942FBA800D99BCF /* CarDataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				8FEB3AC62942EC0D00D99BCF /* ChattingApp.swift */,
-				8FEB3AC82942EC0D00D99BCF /* ContentView.swift */,
+				8FEB3AE62942FBBF00D99BCF /* View */,
 				8FEB3ACA2942EC0E00D99BCF /* Assets.xcassets */,
 				8FEB3AD42942EE7B00D99BCF /* GoogleService-Info.plist */,
 				8FEB3ACC2942EC0E00D99BCF /* Preview Content */,
+				8FEB3AE12942F61C00D99BCF /* Model */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -76,6 +85,25 @@
 				8FEB3ACD2942EC0E00D99BCF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8FEB3AE12942F61C00D99BCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FEB3ADF2942F5A500D99BCF /* Car.swift */,
+				8FEB3AE22942F69800D99BCF /* CarStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FEB3AE62942FBBF00D99BCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FEB3AC82942EC0D00D99BCF /* ContentView.swift */,
+				8FEB3AE42942FBA800D99BCF /* CarDataList.swift */,
+				8FA8DA5129430586000336B4 /* ListCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FEB3AE32942F69800D99BCF /* CarStore.swift in Sources */,
 				8FEB3AC92942EC0D00D99BCF /* ContentView.swift in Sources */,
+				8FEB3AE52942FBA800D99BCF /* CarDataList.swift in Sources */,
+				8FA8DA5229430586000336B4 /* ListCell.swift in Sources */,
 				8FEB3AC72942EC0D00D99BCF /* ChattingApp.swift in Sources */,
+				8FEB3AE02942F5A500D99BCF /* Car.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

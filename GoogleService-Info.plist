@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:707314825564:ios:28011b490e6fe0ce56e999</string>
+	<string>1:707314825564:ios:13c1149f9274e01956e999</string>
 	<key>DATABASE_URL</key>
 	<string>https://chatting-891b8-default-rtdb.firebaseio.com</string>
 </dict>

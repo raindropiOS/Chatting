@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct CarDataList: View {
+    @ObservedObject var carStore: CarStore
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if carStore.cars.isEmpty {
+                Text("it's empty")
+            }
+            List {
+                ForEach(carStore.cars) { car in
+                    Text(car.name)
+                    
+//                    ListCell(car: car)
+                }
+            }
+            .navigationTitle(Text("EV Cars"))
+            .onAppear {
+                carStore.listenRealtimeDatabase()
+            }
+            .onDisappear {
+                carStore.stopListening()
+            }
+        }
     }
 }
 
-struct carDataList_Previews: PreviewProvider {
+struct carDataList_Previews: PreviewProvider {    
     static var previews: some View {
-        carDataList()
+        NavigationStack {
+            CarDataList(carStore: CarStore())
+        }
     }
 }
