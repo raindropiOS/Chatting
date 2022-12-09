@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SignIn: View {
+    @ObservedObject var carStore: CarStore
     @State private var inputID: String = ""
     @State private var inputPW: String = ""
     @State private var inputNickname: String = ""
     @Binding var isSingnInPresented: Bool
+    
     
     var body: some View {
         VStack {
@@ -32,7 +34,8 @@ struct SignIn: View {
             
             Button("Done") {
                 if inputID.count > 1 && inputPW.count > 1 {
-                    
+                    let user = User(id: inputID, nickname: inputNickname, password: inputPW)
+                    carStore.addUserData(user: user)
                 }
                 
                 isSingnInPresented = false
@@ -44,6 +47,6 @@ struct SignIn: View {
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn(isSingnInPresented: .constant(true))
+        SignIn(carStore: CarStore(), isSingnInPresented: .constant(true))
     }
 }

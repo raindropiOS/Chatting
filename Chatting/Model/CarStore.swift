@@ -9,7 +9,6 @@ import Foundation
 import FirebaseDatabase
 
 class CarStore : ObservableObject {
-    
     @Published var cars: [Car] = []
     @Published var users: [User] = []
     
@@ -77,5 +76,26 @@ class CarStore : ObservableObject {
     func stopListening() {
         databasePath?.removeAllObservers()
         userDatabasePath?.removeAllObservers()
+    }
+    
+    func addUserData(user: User) {
+        guard let key = userDatabasePath!.childByAutoId().key else { return }
+
+        let user = [
+            "id" : user.id,
+            "nickname" : user.nickname,
+            "password" : user.password
+        ]
+
+        
+//        let childUpdates = ["/UserData/\(key)": user] : 이 경우 userDatabasePath(이미 UserData 접근함)에 접근해서 UserData 경로를 찾거나 추가한다 => UserData 안에 UserData 경로 추가하고 데이터 생성
+        let childUpdates = ["\(key)": user]
+//        self.userDatabasePath!.setValue([
+//            "id" : user.id,
+//            "nickname" : user.nickname,
+//            "password" : user.password
+//        ])
+        
+        userDatabasePath!.updateChildValues(childUpdates)
     }
 }
