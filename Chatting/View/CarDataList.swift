@@ -13,13 +13,15 @@ struct CarDataList: View {
     var body: some View {
         VStack {
             if carStore.cars.isEmpty {
-                Text("it's empty")
+                Text("car store's cars are empty")
             }
+            if carStore.users.isEmpty {
+                Text("user empty")
+            }
+            
             List {
                 ForEach(carStore.cars) { car in
-                    Text(car.name)
-                    
-//                    ListCell(car: car)
+                    ListCell(car: car)
                 }
             }
             .navigationTitle(Text("EV Cars"))

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8FA8DA5229430586000336B4 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8DA5129430586000336B4 /* ListCell.swift */; };
+		8FA8DA5629435C34000336B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8DA5529435C34000336B4 /* LoginView.swift */; };
+		8FA8DA5829435C46000336B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8DA5729435C46000336B4 /* User.swift */; };
+		8FA8DA5A2943703F000336B4 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA8DA592943703F000336B4 /* SignIn.swift */; };
 		8FEB3AC72942EC0D00D99BCF /* ChattingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3AC62942EC0D00D99BCF /* ChattingApp.swift */; };
 		8FEB3AC92942EC0D00D99BCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB3AC82942EC0D00D99BCF /* ContentView.swift */; };
 		8FEB3ACB2942EC0E00D99BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FEB3ACA2942EC0E00D99BCF /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		8FA8DA5129430586000336B4 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		8FA8DA5529435C34000336B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8FA8DA5729435C46000336B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8FA8DA592943703F000336B4 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		8FEB3AC32942EC0D00D99BCF /* Chatting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEB3AC62942EC0D00D99BCF /* ChattingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingApp.swift; sourceTree = "<group>"; };
 		8FEB3AC82942EC0D00D99BCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				8FEB3ADF2942F5A500D99BCF /* Car.swift */,
 				8FEB3AE22942F69800D99BCF /* CarStore.swift */,
+				8FA8DA5729435C46000336B4 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,7 +108,9 @@
 			children = (
 				8FEB3AC82942EC0D00D99BCF /* ContentView.swift */,
 				8FEB3AE42942FBA800D99BCF /* CarDataList.swift */,
+				8FA8DA5529435C34000336B4 /* LoginView.swift */,
 				8FA8DA5129430586000336B4 /* ListCell.swift */,
+				8FA8DA592943703F000336B4 /* SignIn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,8 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FEB3AE32942F69800D99BCF /* CarStore.swift in Sources */,
+				8FA8DA5A2943703F000336B4 /* SignIn.swift in Sources */,
+				8FA8DA5629435C34000336B4 /* LoginView.swift in Sources */,
 				8FEB3AC92942EC0D00D99BCF /* ContentView.swift in Sources */,
 				8FEB3AE52942FBA800D99BCF /* CarDataList.swift in Sources */,
+				8FA8DA5829435C46000336B4 /* User.swift in Sources */,
 				8FA8DA5229430586000336B4 /* ListCell.swift in Sources */,
 				8FEB3AC72942EC0D00D99BCF /* ChattingApp.swift in Sources */,
 				8FEB3AE02942F5A500D99BCF /* Car.swift in Sources */,
