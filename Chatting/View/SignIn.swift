@@ -13,7 +13,8 @@ struct SignIn: View {
     @State private var inputPW: String = ""
     @State private var inputNickname: String = ""
     @Binding var isSingnInPresented: Bool
-    
+    @State private var showRemoveUser = true
+    @State private var idOfUserToBeRemoved: String = ""
     
     var body: some View {
         VStack {
@@ -39,6 +40,14 @@ struct SignIn: View {
                 }
                 
                 isSingnInPresented = false
+            }
+            
+            if showRemoveUser {
+                TextField("input user's id to remove", text: $idOfUserToBeRemoved)
+                
+                Button("Remove") {
+                    carStore.removeUserData(userID: idOfUserToBeRemoved)
+                }
             }
         }
         .padding()
